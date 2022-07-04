@@ -10,7 +10,7 @@ const Weather = ({ data }) => {
       <div className="relative flex justify-between">
         <div className="flex flex-col items-center">
           <img
-            src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
             alt="/"
             width={100}
             height={100}
