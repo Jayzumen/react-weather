@@ -50,6 +50,5 @@ const Weather = ({ data }) => {
     </div>
   );
 };
-// &#176;
 
 export default Weather;
