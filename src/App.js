@@ -28,30 +28,31 @@ function App() {
     return (
       <div>
         {/* Image overlay */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-10"></div>
+        <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-10'></div>
         {/* Background */}
 
         <img
-          className="absolute w-full h-full object-cover"
-          src="/clouds.jpg"
-          alt="Weather"
+          className='absolute w-full h-full object-cover'
+          src='/clouds.jpg'
+          alt='Weather'
         />
 
         {/* Search Field */}
-        <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10 px-1">
+        <div className='relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10 px-1'>
           <form
             onSubmit={fetchWeather}
-            className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl"
-          >
+            className='flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl'>
             <div>
               <input
                 onChange={(e) => setCity(e.target.value)}
-                className="bg-transparent border-none text-white focus:outline-none text-2xl placeholder:text-white"
-                type="text"
-                placeholder="Search city..."
+                className='bg-transparent border-none text-white focus:outline-none text-2xl placeholder:text-white'
+                type='text'
+                placeholder='Search city...'
               />
             </div>
-            <button onClick={fetchWeather}>
+            <button
+              aria-label='search Weather'
+              onClick={fetchWeather}>
               <BsSearch size={20} />
             </button>
           </form>
